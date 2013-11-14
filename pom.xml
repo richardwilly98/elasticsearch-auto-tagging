@@ -25,7 +25,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<elasticsearch.version>0.90.3</elasticsearch.version>
+		<elasticsearch.version>1.0.0.Beta1</elasticsearch.version>
 		<stanford-corenlp.version>3.2.0</stanford-corenlp.version>
 	</properties>
 
@@ -127,4 +127,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>http://central.maven.org/maven2/</url>
+		</repository>
+	</repositories>
 </project>
