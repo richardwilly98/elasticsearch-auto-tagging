@@ -8,14 +8,14 @@ Attempt to use Stanford NLP library in Elasticsearch
 ### Requirements
 - ES 1.0.0.Beta1
 
-Install plugin:  
+#### Install plugin:  
 Change $ES_HOME path in rebuild.bat  
 Execute rebuild.bat  
 
-Create new index  
+#### Create new index  
 ```PUT /test-autotagging```
 
-Create new mapping
+#### Create new mapping
 ```
 PUT /test-autotagging/attachment/_mapping
 {
@@ -45,13 +45,13 @@ PUT /test-autotagging/attachment/_mapping
 
 ```  
 
-Index few documents  
+#### Index few documents  
 ```
 curl -XPUT localhost:9200/test-autotagging/attachment/1 -d @content-1.json
 curl -XPUT localhost:9200/test-autotagging/attachment/2 -d @content-2.json
 ```
 
-Invoke custom REST action to "auto-tag" the indexed documents:
+#### Invoke custom REST action to "auto-tag" the indexed documents:
 ```
 POST /test-autotagging/attachment/1/_autoTagging?t=tags&f=content
 ```
